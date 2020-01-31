@@ -1,0 +1,13 @@
+.btn {
+  padding: .5rem 1rem;
+  background: none;
+  border-radius: 20px;
+  border: $border;
+  transition: $transition-btn;
+  cursor: pointer;
+
+  &:hover {
+    background: $bgc-tertiary;
+    color: $color-dark;
+  }
+}

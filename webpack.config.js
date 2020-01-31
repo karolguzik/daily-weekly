@@ -2,7 +2,9 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: ['babel-polyfill', './src/js/app.js'],
+  entry: {
+    app: ['babel-polyfill', './src/js/app.js'],
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/bundle.js'
@@ -32,7 +34,7 @@ module.exports = {
       {
         test: /\.(sass|scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
-      },
+      }
     ]
   }
 };

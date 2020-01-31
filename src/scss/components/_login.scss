@@ -1,0 +1,34 @@
+.login {
+  @include positionAbs;
+  height: 60%;
+  width: 80%;
+  padding: 3rem;
+  background: $bgc-primary;
+  box-shadow: 0 5px 20px -10px #000;
+  border-radius: 5px;
+  text-align: center;
+
+  &__heading {
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    @include flexStack(column);
+  }
+
+  &__username,
+  &__password {
+    margin: 1rem 0;
+  }
+
+  &__submit,
+  &__cancel {
+    margin-top: 2rem;
+    width: 100px;
+    color: $color-light;
+  }
+
+  &__submit {
+    background: $bgc-tertiary;
+  }
+}

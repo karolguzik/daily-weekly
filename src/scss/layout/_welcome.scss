@@ -1,0 +1,16 @@
+.welcome {
+  @include flexStack(column);
+  height: 100%;
+  text-align: center;
+
+  &__btn-container {
+    padding: 2rem 0;
+  }
+
+  &__login,
+  &__registration {
+    width: 10rem;
+    margin: 0 .5rem;
+    color: $color-light;
+  }
+}

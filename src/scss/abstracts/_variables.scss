@@ -1,1 +1,14 @@
-$bgc-primary: #eee;
+$font-family: 'Montserrat',
+sans-serif;
+$font-size-default: 1rem;
+$bgc-primary: #1f1f1f;
+$bgc-secondary: #eee;
+$bgc-tertiary: #008a6a;
+$color-light: #eee;
+$color-dark: #222;
+$color-gray: #888;
+$color-green: #008a6a;
+
+$border: 2px solid $color-green;
+$transition-btn: .1s ease-in;
+$transition-menu: .3s ease-in-out;
