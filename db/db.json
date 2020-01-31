@@ -1,0 +1,21 @@
+{
+  "users": [{
+    "username": "Jhon Doe",
+    "password": "qwerty",
+    "taskList": [{
+        "id": 1,
+        "name": "Title of task 1",
+        "description": "This is task of number 1",
+        "date": "02-02-2020",
+        "priority": "important"
+      },
+      {
+        "id": 2,
+        "name": "Title of task 2",
+        "description": "This is task of number 2",
+        "date": "11-02-2020",
+        "priority": "important"
+      }
+    ]
+  }]
+}
