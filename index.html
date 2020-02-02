@@ -20,60 +20,132 @@
     </div>
   </div> -->
 
-  <div class="login">
+  <!-- <div class="login">
     <h2 class="login__heading heading heading--secondary">Login</h2>
-    <div class="login__form">
+    <form class="form login__form">
       <input class="login__username" type="text" placeholder="username">
       <input class="login__password" type="password" placeholder="password">
       <button class="btn login__submit">Submit</button>
       <button class="btn login__cancel">Cancel</button>
-    </div>
-  </div>
+    </form>
+  </div> -->
 
   <!-- <div class="registration">
     <h2 class="registration__heading heading heading--secondary">Registration</h2>
-    <div class="registration__form">
+    <form class="form registration__form">
       <input class="registration__username" type="text" placeholder="username">
       <input class="registration__password" type="password" placeholder="password">
       <button class="btn registration__submit">Create</button>
       <button class="btn registration__cancel">Cancel</button>
-    </div>
+    </form>
   </div> -->
 
-  <section class="home">
-    <div class="menu">
-      <div class="greenSpin"></div>
-      <div class="user-info">
-        <img src="https://pbs.twimg.com/profile_images/1089475519127670784/aXlHgUIJ_400x400.jpg" alt="User image"
-          class="user__img">
-        <span class="user__detail">Karol Guzik</span>
-      </div>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <i class="fa fa-plus" aria-hidden="true"></i>
-            Add task
-          </li>
-          <li class="nav__item">
-            <i class="fa fa-list-alt" aria-hidden="true"></i>
-            Daily
-          </li>
-          <li class="nav__item">
-            <i class="fa fa-tasks" aria-hidden="true"></i>
-            Weekly
-          </li>
-          <li class="nav__item">
-            <i class="fa fa-trophy" aria-hidden="true"></i>
-            Activity
-          </li>
-        </ul>
-      </nav>
-      <div class="logout">
-        <i class="fa fa-arrow-left" aria-hidden="true"></i>
-        Log out
-      </div>
+  <div class="menu">
+    <div class="menu__handle"></div>
+    <div class="user-info">
+      <img src="https://pbs.twimg.com/profile_images/1089475519127670784/aXlHgUIJ_400x400.jpg" alt="User image"
+        class="user-info__img">
+      <span class="user-info__detail">Karol Guzik</span>
     </div>
-  </section>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <i class="fa fa-plus" aria-hidden="true"></i>
+          Add task
+        </li>
+        <li class="nav__item">
+          <i class="fa fa-list-alt" aria-hidden="true"></i>
+          Daily
+        </li>
+        <li class="nav__item">
+          <i class="fa fa-tasks" aria-hidden="true"></i>
+          Weekly
+        </li>
+        <li class="nav__item">
+          <i class="fa fa-trophy" aria-hidden="true"></i>
+          Activity
+        </li>
+        <li class="nav__item logout">
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          Log out
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <main>
+    <!-- <section class="page todo">
+      <h2 class="heading heading--secondary">Create your task</h2>
+      <div class="form-container">
+        <form class="form todo__form">
+          <input class="todo__name" type="text" name="todo__name" placeholder="Name">
+          <textarea class="todo__description" name="todo__description" placeholder="Description"></textarea>
+          <label for="todo-easy">Easy</label>
+          <input class="todo__status-easy" type="checkbox" name="todo-easy" id="todo-easy">
+          <label for="todo-important">Important</label>
+          <input class="todo__status-important" type="checkbox" name="todo-important" id="todo-important">
+          <button class="btn todo__submit" type="submit">Create</button>
+        </form>
+      </div>
+    </section> -->
+
+    <section class="page daily">
+      <div class="daily__top-panel">
+        <h2 class="daily__heading heading heading--secondary">Daily</h2>
+        <input type="text" class="daily__filter" placeholder="find...">
+      </div>
+      <div class="daily__tasks">
+        <div class="daily__task" id="task-1">
+          <a href="#task-1" class="task__title heading heading--tertiary">Learning JavaScript</a>
+          <div class="task__content">
+            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
+              Have to learn some basic of Javascript fundamentals. For making better
+              Have to learn some basic of Javascript fundamentals. For making better
+              Have to learn some basic of Javascript fundamentals. For making better
+              Have to learn some basic of Javascript fundamentals. For making better
+              Have to learn some basic of Javascript fundamentals. For making better
+              work
+              with frameworks.</p>
+          </div>
+        </div>
+        <div class="daily__task" id="task-2">
+          <a href="#task-2" class="task__title heading heading--tertiary">Read a book</a>
+          <div class="task__content">
+            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
+              work
+              with frameworks.</p>
+          </div>
+        </div>
+        <div class="daily__task" id="task-3">
+          <a href="#task-3" class="task__title heading heading--tertiary">Walk with dog</a>
+          <div class="task__content">
+            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
+              work
+              with frameworks.</p>
+          </div>
+        </div>
+        <div class="daily__task" id="task-4">
+          <a href="#task-4" class="task__title heading heading--tertiary">Shopping</a>
+          <div class="task__content">
+            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
+              work
+              with frameworks.</p>
+          </div>
+        </div>
+        <div class="daily__task" id="task-5">
+          <a href="#task-5" class="task__title heading heading--tertiary">Teaching a friend</a>
+          <div class="task__content">
+            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
+              work
+              with frameworks.</p>
+          </div>
+        </div>
+
+
+        <p class="daily__empty lead">You dont have any tasks at the moment. Please start with create ;)</p>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

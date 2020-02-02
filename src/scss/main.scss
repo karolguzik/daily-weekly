@@ -6,9 +6,12 @@
 @import 'base/typography';
 @import 'base/utilities';
 
+@import 'components/menu';
+@import 'components/form';
 @import 'components/btn';
 @import 'components/login';
 @import 'components/registration';
 
-@import 'layout/welcome';
-@import 'layout/home';
+@import 'pages/welcome';
+@import 'pages/todo';
+@import 'pages/daily';

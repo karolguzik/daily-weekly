@@ -11,4 +11,4 @@ $color-green: #008a6a;
 
 $border: 2px solid $color-green;
 $transition-btn: .1s ease-in;
-$transition-menu: .3s ease-in-out;
+$transition-menu: .5s cubic-bezier(.25, .75, .5, 1.25);

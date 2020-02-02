@@ -1,3 +1,12 @@
 .text-color-green {
   color: $color-green;
 }
+
+.page {
+  height: 100vh;
+}
+
+.lead {
+  color: $color-gray;
+  font-weight: 700;
+}

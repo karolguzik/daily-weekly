@@ -1,0 +1,20 @@
+.todo {
+  @include flexStack(column);
+
+  &__form {
+    padding: 3rem;
+  }
+
+  &__name {
+    margin: 1rem 0;
+  }
+
+  &__description {
+    margin: 1rem 0;
+    height: 10rem;
+  }
+
+  &__submit {
+    margin: 1rem 0;
+  }
+}

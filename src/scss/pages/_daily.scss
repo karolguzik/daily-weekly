@@ -1,0 +1,85 @@
+.daily {
+
+  &__top-panel {
+    @include flexStack(row, flex-start);
+    padding: 2rem 3rem;
+    box-shadow: 0 5px 5px -5px #000;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__filter {
+    width: 15rem;
+    margin-left: 2rem;
+    text-align: center;
+    border: none;
+    box-shadow: 0 5px 5px -5px $color-green;
+
+    &:hover {
+      background: none;
+      color: $color-gray;
+    }
+  }
+
+  &__tasks {
+    overflow: hidden;
+  }
+
+  &__task {
+    box-shadow: 0 5px 5px -5px #000;
+    overflow: hidden;
+
+    &:target .task__content {
+      max-height: 30rem;
+    }
+
+    &:target .task__title {
+      color: $color-green;
+    }
+
+    &:target .task__description {
+      opacity: 1;
+    }
+
+    .task__title {
+      display: block;
+      padding: 2rem;
+      font-weight: 700;
+      color: $color-light;
+      transition: $transition-btn;
+      box-shadow: 0 5px 5px -5px #000;
+
+      &:hover {
+        color: $color-green;
+      }
+    }
+
+    .task__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: $transition-menu;
+      // transition: max-height .3s;
+    }
+
+    .task__description {
+      display: block;
+      padding: 3rem;
+      width: 50%;
+      color: $color-gray;
+      opacity: 0;
+      transition: .3s .3s ease;
+    }
+
+    &:hover {
+      color: $color-green;
+      cursor: pointer;
+    }
+  }
+
+  &__empty {
+    @include positionAbs;
+    text-align: center;
+  }
+}

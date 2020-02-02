@@ -1,0 +1,73 @@
+.menu {
+  @include flexStack(column, space-around, flex-start);
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  width: 60%;
+  height: 100%;
+  background: $bgc-primary;
+  box-shadow: 4px 0 10px -5px #000;
+  transition: $transition-menu;
+  z-index: 10;
+
+  &--isActive {
+    transform: translateX(0);
+  }
+
+  &__handle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    background: $bgc-tertiary;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+
+.user-info {
+  @include flexStack;
+  padding-left: 3rem;
+
+  .user-info__img {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background: $color-light;
+  }
+
+  .user-info__detail {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+.nav {
+  width: 100%;
+
+  &__item {
+    padding: 2rem 0 2rem 3rem;
+    font-size: 1.4rem;
+    box-shadow: 0 5px 5px -5px #000;
+    transition: $transition-btn;
+
+    i {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      // background: $bgc-tertiary;
+      // color: $color-dark;
+      box-shadow: 0 5px 5px -5px $color-green;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-top: 10rem;
+    }
+  }
+}

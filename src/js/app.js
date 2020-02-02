@@ -5,4 +5,4 @@ const toggleMenu = () => {
 }
 
 
-document.querySelector('.greenSpin').addEventListener('click', toggleMenu);
+document.querySelector('.menu__handle').addEventListener('click', toggleMenu);
