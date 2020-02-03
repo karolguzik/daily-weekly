@@ -1,0 +1,96 @@
+.activity {
+  &__top-panel {
+    padding: 2rem 3rem;
+    box-shadow: 0 5px 5px -5px #000;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__tasks {
+    overflow: hidden;
+  }
+
+
+  .finished {
+    box-shadow: 0 5px 5px -5px #000;
+    overflow: hidden;
+
+    &:target .finished__list {
+      max-height: 30rem;
+    }
+
+    &:target .activity__title {
+      color: $color-green;
+    }
+
+    &:target .finished__task {
+      opacity: 1;
+    }
+  }
+
+  .active {
+    box-shadow: 0 5px 5px -5px #000;
+    overflow: hidden;
+
+    &:target .active__list {
+      max-height: 30rem;
+    }
+
+    &:target .activity__title {
+      color: $color-green;
+    }
+
+    &:target .active__task {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    display: block;
+    padding: 2rem;
+    font-weight: 700;
+    color: $color-light;
+    transition: $transition-btn;
+    box-shadow: 0 5px 5px -5px #000;
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  .active__count,
+  .finished__count {
+    display: inline-block;
+    @include flexStack;
+    margin-left: 2rem;
+    width: 2rem;
+    height: 2rem;
+    // padding: 1rem;
+    border-radius: 50%;
+    background: $bgc-tertiary;
+    color: $color-dark;
+    font-weight: 300;
+  }
+
+  .active__list,
+  .finished__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-menu;
+  }
+
+  .active__task,
+  .finished__task {
+    padding: 2rem;
+    box-shadow: 0 5px 5px -5px #000;
+    opacity: 0;
+    transition: .3s .3s ease;
+    color: $color-gray;
+  }
+
+  .activity__title {
+    @include flexStack(row, space-between, center);
+  }
+}

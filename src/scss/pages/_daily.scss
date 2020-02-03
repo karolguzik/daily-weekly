@@ -65,8 +65,9 @@
 
     .task__description {
       display: block;
-      padding: 3rem;
-      width: 50%;
+      margin: 0 auto;
+      padding: 2rem 3rem;
+      width: 90%;
       color: $color-gray;
       opacity: 0;
       transition: .3s .3s ease;

@@ -1,0 +1,64 @@
+.weekly {
+  &__top-panel {
+    padding: 2rem 3rem;
+    box-shadow: 0 5px 5px -5px #000;
+  }
+
+  &__heading {
+    font-size: 3rem;
+  }
+
+  &__tasks {
+    overflow: hidden;
+  }
+
+  &__task-container {
+    box-shadow: 0 5px 5px -5px #000;
+    overflow: hidden;
+
+    &:target .weekly__task-list {
+      max-height: 30rem;
+    }
+
+    &:target .weekly__title {
+      color: $color-green;
+    }
+
+    &:target .weekly__task {
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    display: block;
+    padding: 2rem;
+    font-weight: 700;
+    color: $color-light;
+    transition: $transition-btn;
+    box-shadow: 0 5px 5px -5px #000;
+
+    &:hover {
+      color: $color-green;
+    }
+  }
+
+  &__date {
+    margin-left: 2rem;
+    color: $color-gray;
+    font-weight: 300;
+  }
+
+  &__task-list {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-menu;
+  }
+
+  &__task {
+    padding: 2rem;
+    box-shadow: 0 5px 5px -5px #000;
+    opacity: 0;
+    transition: .3s .3s ease;
+    color: $color-gray;
+  }
+}
