@@ -1,12 +1,6 @@
 .weekly {
-  &__top-panel {
-    padding: 2rem 3rem;
-    box-shadow: 0 5px 5px -5px #000;
-  }
-
-  &__heading {
-    font-size: 3rem;
-  }
+  display: none;
+  min-height: 80vh;
 
   &__tasks {
     overflow: hidden;
@@ -17,7 +11,7 @@
     overflow: hidden;
 
     &:target .weekly__task-list {
-      max-height: 30rem;
+      max-height: 100rem;
     }
 
     &:target .weekly__title {
@@ -49,6 +43,7 @@
   }
 
   &__task-list {
+    padding: 0 .5rem;
     max-height: 0;
     overflow: hidden;
     transition: $transition-menu;
@@ -60,5 +55,11 @@
     opacity: 0;
     transition: .3s .3s ease;
     color: $color-gray;
+  }
+
+  &__empty {
+    @include positionAbs;
+    width: 80%;
+    text-align: center;
   }
 }

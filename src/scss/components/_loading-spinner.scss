@@ -1,0 +1,36 @@
+.loading {
+  @include flexStack(column, flex-start, center);
+  display: none;
+  @include positionAbs;
+  width: 80%;
+  height: 60%;
+  padding: 3rem;
+  background: $bgc-primary;
+  z-index: 2;
+}
+
+.loading__text-after {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background: $color-gray;
+  color: $bgc-primary;
+  border-radius: 20px;
+  box-shadow: 0 1px 5px 0 #000;
+  text-align: center;
+
+  @include mq(landscape) {
+    width: 40%;
+  }
+}
+
+.loading__spinner {
+  margin-top: 2rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  border: 3px solid $color-light;
+  border-left: $color-dark;
+  animation: spinnerLoading 1s infinite;
+}

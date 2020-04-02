@@ -1,8 +1,5 @@
 form {
   @include flexStack(column);
-  background: $bgc-primary;
-  box-shadow: 0 5px 20px -10px #000;
-  border-radius: 5px;
 }
 
 input,
@@ -13,6 +10,14 @@ textarea {
   color: $color-gray;
   border: none;
   border-bottom: 1px solid rgba($color-gray, .3);
+
+  @include mq(tablet) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(tablet-xl) {
+    font-size: 1.4rem;
+  }
 }
 
 ::placeholder {

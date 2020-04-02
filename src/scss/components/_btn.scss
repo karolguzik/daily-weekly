@@ -7,6 +7,18 @@
   transition: $transition-btn;
   cursor: pointer;
 
+  @include mq(tablet) {
+    font-size: 1.2rem;
+  }
+
+  @include mq(tablet-xl) {
+    font-size: 1.4rem;
+  }
+
+  @include mq(landscape) {
+    font-size: 1.2rem;
+  }
+
   &:hover {
     background: $bgc-tertiary;
     color: $color-dark;

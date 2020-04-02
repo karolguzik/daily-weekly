@@ -4,10 +4,27 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline-color: rgba($color-green, .3);
 }
 
 html {
   font-size: 62.5%;
+
+  @include mq(tablet) {
+    font-size: 80%;
+  }
+
+  @include mq(tablet-xl) {
+    font-size: 90%;
+  }
+
+  @include mq(landscape) {
+    font-size: 60%;
+  }
+
+  @include mq(desktop-s) {
+    font-size: 70%;
+  }
 }
 
 body {

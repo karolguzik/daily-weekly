@@ -1,20 +1,43 @@
 .todo {
+  position: relative;
   @include flexStack(column);
+  margin-top: 5rem;
+  display: none;
 
   &__form {
-    padding: 3rem;
+    width: 60%;
+
+    @include mq(landscape) {
+      width: 40%;
+    }
   }
 
   &__name {
-    margin: 1rem 0;
+    margin: 0 0 2rem;
   }
 
   &__description {
-    margin: 1rem 0;
     height: 10rem;
   }
 
   &__submit {
-    margin: 1rem 0;
+    margin: 5rem 0 1rem;
+  }
+}
+
+.add-task-message {
+  display: none;
+  @include positionAbs;
+  width: 80%;
+  padding: 3rem;
+  background: $color-gray;
+  color: $bgc-primary;
+  box-shadow: 0 1px 5px 0 #000;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+
+  @include mq(landscape) {
+    width: 40%;
   }
 }

@@ -1,27 +1,7 @@
 .daily {
-
-  &__top-panel {
-    @include flexStack(row, flex-start);
-    padding: 2rem 3rem;
-    box-shadow: 0 5px 5px -5px #000;
-  }
-
-  &__heading {
-    font-size: 3rem;
-  }
-
-  &__filter {
-    width: 15rem;
-    margin-left: 2rem;
-    text-align: center;
-    border: none;
-    box-shadow: 0 5px 5px -5px $color-green;
-
-    &:hover {
-      background: none;
-      color: $color-gray;
-    }
-  }
+  display: none;
+  position: relative;
+  min-height: 80vh;
 
   &__tasks {
     overflow: hidden;
@@ -31,8 +11,13 @@
     box-shadow: 0 5px 5px -5px #000;
     overflow: hidden;
 
+    &:hover {
+      color: $color-green;
+      cursor: pointer;
+    }
+
     &:target .task__content {
-      max-height: 30rem;
+      max-height: 100rem;
     }
 
     &:target .task__title {
@@ -43,8 +28,12 @@
       opacity: 1;
     }
 
+    &:target .task__manage {
+      opacity: 1;
+    }
+
     .task__title {
-      display: block;
+      @include flexStack(row, space-between, center);
       padding: 2rem;
       font-weight: 700;
       color: $color-light;
@@ -54,33 +43,138 @@
       &:hover {
         color: $color-green;
       }
+
+      .finished-tag {
+        color: green;
+        border-bottom: 1px solid green;
+        transform: rotate(-3deg);
+      }
     }
 
     .task__content {
       max-height: 0;
       overflow: hidden;
       transition: $transition-menu;
-      // transition: max-height .3s;
     }
 
     .task__description {
       display: block;
       margin: 0 auto;
-      padding: 2rem 3rem;
-      width: 90%;
+      padding: 2rem;
+      width: 100%;
       color: $color-gray;
       opacity: 0;
       transition: .3s .3s ease;
     }
 
-    &:hover {
-      color: $color-green;
-      cursor: pointer;
+
+    .task__manage {
+      @include flexStack(column, flex-start, flex-start);
+      padding: 1rem 2rem 2rem;
+      width: 100%;
+      transition: .3s .3s ease;
+      opacity: 0;
+
+      &>* {
+        margin: .5rem 0;
+      }
+
+      &--delete,
+      &--done {
+        display: inline-block;
+        margin-right: .5rem;
+        font-size: 1.2rem;
+        color: darkred;
+      }
+
+      &--delete {
+        &:hover {
+          color: darken(darkred, 5%);
+        }
+      }
+
+      &--done {
+        color: $color-gray;
+
+        &:hover {
+          color: darken($color-gray, 5%);
+        }
+      }
+
+      &--created-date {
+        font-weight: 300;
+        color: $color-gray;
+        font-size: .9rem;
+      }
+
+      &--finished-date {
+        font-weight: 300;
+        font-size: .9rem;
+        color: $color-green;
+      }
     }
   }
 
+
+
   &__empty {
     @include positionAbs;
+    width: 80%;
     text-align: center;
+  }
+}
+
+.confirm-task-delete {
+  display: none;
+  @include positionFixed;
+  width: 80%;
+  padding: 3rem;
+  background: $color-gray;
+  color: $bgc-primary;
+  box-shadow: 0 1px 5px 0 #000;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+
+  @include mq(landscape) {
+    width: 40%;
+  }
+}
+
+.btn-delete-yes,
+.btn-delete-no {
+  display: inline-block;
+  padding: .5rem 2rem;
+  margin: 1rem .5rem 0;
+  background: $bgc-primary;
+  color: $color-light;
+  border: 2px solid $bgc-primary;
+  border-radius: 20px;
+  font-size: .9rem;
+  transition: $transition-btn;
+
+  &:hover {
+    background-color: $color-gray;
+    color: $bgc-primary;
+    cursor: pointer;
+  }
+}
+
+.done-task-message {
+  display: none;
+  @include positionFixed;
+  width: 80%;
+  padding: 3rem;
+  background: $color-gray;
+  color: $color-dark;
+  box-shadow: 0 1px 5px 0 #000;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 2;
+
+  @include mq(landscape) {
+    width: 40%;
   }
 }

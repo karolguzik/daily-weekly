@@ -1,21 +1,54 @@
 {
-  "users": [{
-    "username": "Jhon Doe",
-    "password": "qwerty",
-    "taskList": [{
-        "id": 1,
-        "name": "Title of task 1",
-        "description": "This is task of number 1",
-        "date": "02-02-2020",
-        "priority": "important"
-      },
-      {
-        "id": 2,
-        "name": "Title of task 2",
-        "description": "This is task of number 2",
-        "date": "11-02-2020",
-        "priority": "important"
-      }
-    ]
-  }]
+  "users": [
+    {
+      "id": 1,
+      "username": "Jhon Doe",
+      "password": "qwerty",
+      "tasks": [
+        {
+          "id": 1,
+          "name": "asd",
+          "description": "asd",
+          "createdDate": "2020-3-16 16:36:6",
+          "finishedDate": null,
+          "priority": "important",
+          "status": "active"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "username": "emilia",
+      "password": "emilka",
+      "tasks": [
+        {
+          "id": 2,
+          "name": "dfsfsf",
+          "description": "fsfsfs",
+          "createdDate": "2020-3-16 15:30:57",
+          "finishedDate": "2020-3-16 15:31:8",
+          "priority": "important",
+          "status": "finished"
+        },
+        {
+          "id": 2,
+          "name": "vxvx",
+          "description": "vxvxv",
+          "createdDate": "2020-3-16 15:32:24",
+          "finishedDate": null,
+          "priority": "important",
+          "status": "active"
+        },
+        {
+          "id": 3,
+          "name": "vxxvx",
+          "description": "vxvx",
+          "createdDate": "2020-3-16 15:32:30",
+          "finishedDate": null,
+          "priority": "important",
+          "status": "active"
+        }
+      ]
+    }
+  ]
 }

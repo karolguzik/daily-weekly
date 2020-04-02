@@ -5,9 +5,36 @@
   align-items: $align;
 }
 
-@mixin positionAbs {
+@mixin positionAbs($top: 50%, $left: 50%) {
   position: absolute;
-  top: 50%;
+  top: $top;
+  left: $left;
+  transform: translate(-$top, -$left);
+}
+
+@mixin positionFixed {
+  position: fixed;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+$breakpoints: (tablet: (min-width: 768px),
+  tablet-xl: (min-width: 1024px),
+  landscape: ((min-height: 568px) and (orientation: landscape)),
+  desktop-s: (min-width: 1280px),
+);
+
+@mixin mq($breakpoint) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if($size) {
+    @media #{$size} {
+      @content;
+    }
+  }
+
+  @else {
+    @error '#{$breakpoint} - no require this size';
+  }
 }

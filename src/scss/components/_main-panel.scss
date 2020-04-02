@@ -1,0 +1,30 @@
+.main-panel {
+  min-height: 100vh;
+  display: none;
+
+  &__top {
+    @include flexStack(row, flex-start);
+    padding: 2rem 3rem;
+    box-shadow: 0 5px 5px -5px #000;
+  }
+}
+
+.sort-by-container {
+  display: none;
+  margin-left: auto;
+}
+
+.sort-by-status {
+  display: none;
+  padding: .5rem;
+  background: $color-gray;
+  color: $color-dark;
+  border-radius: 20px;
+  font-size: .9rem;
+  transition: $transition-btn;
+
+  &:hover {
+    background-color: darken($color-gray, 10%);
+    cursor: pointer;
+  }
+}

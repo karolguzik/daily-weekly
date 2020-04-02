@@ -6,66 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
-    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
   <title>Daily - weekly</title>
 </head>
 
 <body>
-  <!-- <div class="welcome">
-    <h1 class="heading heading--primary">Create your <div>daily <span class="text-color-green">&</span> weekly</div>
+  <div class="loading">
+    <p class="loading__text-before">Initialize new account ...</p>
+    <p class="loading__text-after success">
+      Well done! Your account has been created!
+    </p>
+    <div class="loading__spinner"></div>
+  </div>
+
+  <section class="welcome">
+    <h1 class="heading heading--primary">
+      Create your
+      <div>daily <span class="text-color-green">&</span> weekly</div>
     </h1>
     <div class="welcome__btn-container">
       <button class="btn btn--login welcome__login">Login</button>
-      <button class="btn btn--registration welcome__registration">Registration</button>
+      <button class="btn btn--registration welcome__registration">
+        Registration
+      </button>
     </div>
-  </div> -->
+  </section>
 
-  <!-- <div class="login">
+  <div class="login">
     <h2 class="login__heading heading heading--secondary">Login</h2>
     <form class="form login__form">
-      <input class="login__username" type="text" placeholder="username">
-      <input class="login__password" type="password" placeholder="password">
+      <input class="login__username" type="text" placeholder="username" />
+      <input class="login__password" type="password" placeholder="password" />
       <button class="btn login__submit">Submit</button>
       <button class="btn login__cancel">Cancel</button>
     </form>
-  </div> -->
+  </div>
 
-  <!-- <div class="registration">
-    <h2 class="registration__heading heading heading--secondary">Registration</h2>
+  <div class="registration">
+    <h2 class="registration__heading heading heading--secondary">
+      Registration
+    </h2>
     <form class="form registration__form">
-      <input class="registration__username" type="text" placeholder="username">
-      <input class="registration__password" type="password" placeholder="password">
+      <input class="registration__username" type="text" placeholder="username" />
+      <input class="registration__password" type="password" placeholder="password" />
       <button class="btn registration__submit">Create</button>
       <button class="btn registration__cancel">Cancel</button>
     </form>
-  </div> -->
+  </div>
 
   <div class="menu">
     <div class="menu__handle"></div>
     <div class="user-info">
-      <img src="https://pbs.twimg.com/profile_images/1089475519127670784/aXlHgUIJ_400x400.jpg" alt="User image"
-        class="user-info__img">
+      <span class="user-info__img"><i class="fas fa-image"></i></span>
       <span class="user-info__detail">Karol Guzik</span>
     </div>
     <nav class="nav">
       <ul class="nav__list">
-        <li class="nav__item">
+        <li class="nav__item nav__todo">
           <i class="fa fa-plus" aria-hidden="true"></i>
           Add task
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__daily">
           <i class="fa fa-list-alt" aria-hidden="true"></i>
           Daily
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__weekly">
           <i class="fa fa-tasks" aria-hidden="true"></i>
           Weekly
         </li>
-        <li class="nav__item">
+        <li class="nav__item nav__activity">
           <i class="fa fa-trophy" aria-hidden="true"></i>
           Activity
         </li>
-        <li class="nav__item logout">
+        <li class="nav__item nav__logout">
           <i class="fa fa-arrow-left" aria-hidden="true"></i>
           Log out
         </li>
@@ -74,146 +87,121 @@
   </div>
 
   <main>
-    <!-- <section class="page todo">
-      <h2 class="heading heading--secondary">Create your task</h2>
-      <div class="form-container">
-        <form class="form todo__form">
-          <input class="todo__name" type="text" name="todo__name" placeholder="Name">
-          <textarea class="todo__description" name="todo__description" placeholder="Description"></textarea>
-          <label for="todo-easy">Easy</label>
-          <input class="todo__status-easy" type="checkbox" name="todo-easy" id="todo-easy">
-          <label for="todo-important">Important</label>
-          <input class="todo__status-important" type="checkbox" name="todo-important" id="todo-important">
-          <button class="btn todo__submit" type="submit">Create</button>
-        </form>
+    <section class="main-panel">
+      <div class="main-panel__top">
+        <h2 class="heading heading--secondary main-panel__heading">
+          <div>Daily <span class="text-color-green">&</span> weekly app</div>
+        </h2>
+        <div class="sort-by-container">
+          <span class="sort-by-status sort-active">Sort by status</span>
+        </div>
       </div>
-    </section> -->
+      <div class="main-panel__content">
 
-    <section class="page daily">
-      <div class="daily__top-panel">
-        <h2 class="daily__heading heading heading--secondary">Daily</h2>
-        <input type="text" class="daily__filter" placeholder="find...">
-      </div>
-      <div class="daily__tasks">
-        <div class="daily__task" id="task-1">
-          <a href="#task-1" class="task__title heading heading--tertiary">Learning JavaScript</a>
-          <div class="task__content">
-            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
-              Have to learn some basic of Javascript fundamentals. For making better
-              Have to learn some basic of Javascript fundamentals. For making better
-              Have to learn some basic of Javascript fundamentals. For making better
-              Have to learn some basic of Javascript fundamentals. For making better
-              Have to learn some basic of Javascript fundamentals. For making better
-              work
-              with frameworks.</p>
-          </div>
-        </div>
-        <div class="daily__task" id="task-2">
-          <a href="#task-2" class="task__title heading heading--tertiary">Read a book</a>
-          <div class="task__content">
-            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
-              work
-              with frameworks.</p>
-          </div>
-        </div>
-        <div class="daily__task" id="task-3">
-          <a href="#task-3" class="task__title heading heading--tertiary">Walk with dog</a>
-          <div class="task__content">
-            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
-              work
-              with frameworks.</p>
-          </div>
-        </div>
-        <div class="daily__task" id="task-4">
-          <a href="#task-4" class="task__title heading heading--tertiary">Shopping</a>
-          <div class="task__content">
-            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
-              work
-              with frameworks.</p>
-          </div>
-        </div>
-        <div class="daily__task" id="task-5">
-          <a href="#task-5" class="task__title heading heading--tertiary">Teaching a friend</a>
-          <div class="task__content">
-            <p class="task__description lead">Have to learn some basic of Javascript fundamentals. For making better
-              work
-              with frameworks.</p>
-          </div>
-        </div>
-
-
-        <p class="daily__empty lead">You dont have any tasks at the moment. Please start with create ;)</p>
-      </div>
-    </section>
-
-    <section class="page weekly">
-      <div class="weekly__top-panel">
-        <h2 class="weekly__heading heading heading--secondary">Weekly</h2>
-      </div>
-
-      <div class="weekly__tasks">
-        <div class="weekly__task-container" id="week-1">
-          <a href="#week-1" class="weekly__title heading heading--tertiary">Week 1 <span class="weekly__date">03.02.2020
-              - 09.02.2020</span></a>
-          <ul class="weekly__task-list">
-            <li class="weekly__task">This is task 1</li>
-            <li class="weekly__task">This is task 2</li>
-            <li class="weekly__task">This is task 3</li>
+        <section class="start">
+          <h2 class="heading heading--secondary">
+            Welcome on board <span class="start-user-name"></span>
+          </h2>
+          <h3 class="heading heading--tertiary start__heading">
+            Manage your tasks in 5 simple steps:
+          </h3>
+          <ul class="rules">
+            <li class="rule">1. Create your own task in Todo page!</li>
+            <li class="rule">
+              2. Set to completed or delete your tasks in Daily page!
+            </li>
+            <li class="rule">3. Watch out your weekly plan of tasks!</li>
+            <li class="rule">4. Watch out your progress in Activity page!</li>
+            <li class="rule">5. Logout to take a rest ;)</li>
           </ul>
-        </div>
+        </section>
 
-        <div class="weekly__task-container" id="week-2">
-          <a href="#week-2" class="weekly__title heading heading--tertiary">Week 2 <span class="weekly__date">10.02.2020
-              - 16.02.2020</span></a>
-          <ul class="weekly__task-list">
-            <li class="weekly__task">This is task 1</li>
-            <li class="weekly__task">This is task 2</li>
-            <li class="weekly__task">This is task 3</li>
-            <li class="weekly__task">This is task 4</li>
-            <li class="weekly__task">This is task 5</li>
-          </ul>
-        </div>
+        <section class="todo">
+          <div class="add-task-message">Your task has been added!</div>
+          <form class="form todo__form">
+            <input class="todo__name" type="text" name="todo__name" placeholder="Name" />
+            <textarea class="todo__description" name="todo__description" placeholder="Description"></textarea>
+            <button class="btn todo__submit" type="submit">Create</button>
+          </form>
+        </section>
 
-        <div class="weekly__task-container" id="week-3">
-          <a href="#week-3" class="weekly__title heading heading--tertiary">Week 3 <span class="weekly__date">17.02.2020
-              - 23.02.2020</span></a>
-          <ul class="weekly__task-list">
-            <li class="weekly__task">This is task 1</li>
-            <li class="weekly__task">This is task 2</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+        <section class="daily">
+          <div class="confirm-task-delete">
+            <p>
+              Are u sure ?
+            </p>
+            <span class="btn-delete-yes">Yes</span>
+            <span class="btn-delete-no">No</span>
+          </div>
+          <div class="done-task-message">Well done! Task done!</div>
+          <div class="daily__tasks">
+            <p class="daily__empty lead">
+              You dont have any tasks at the moment. Please start with create
+              ;)
+            </p>
+          </div>
+        </section>
 
-    <section class="page activity">
-      <div class="activity__top-panel">
-        <h2 class="activity__heading heading heading--secondary">Activity</h2>
-      </div>
+        <section class="weekly">
+          <div class="weekly__tasks">
+            <p class="weekly__empty lead">
+              This section is still in progress... Sorry about that ;)
+            </p>
+            <!-- <div class="weekly__task-container" id="week-1">
+                <a
+                  href="#week-1"
+                  class="weekly__title heading heading--tertiary"
+                  >Week 1
+                  <span class="weekly__date">03.02.2020 - 09.02.2020</span></a
+                >
+                <ul class="weekly__task-list">
+                  <li class="weekly__task">This is task 1</li>
+                  <li class="weekly__task">This is task 2</li>
+                </ul>
+              </div>
 
-      <div class="activity__tasks">
+              <div class="weekly__task-container" id="week-2">
+                <a
+                  href="#week-2"
+                  class="weekly__title heading heading--tertiary"
+                  >Week 2
+                  <span class="weekly__date">10.02.2020 - 16.02.2020</span></a
+                >
+                <ul class="weekly__task-list">
+                  <li class="weekly__task">This is task 1</li>
+                  <li class="weekly__task">This is task 2</li>
+                </ul>
+              </div> -->
+          </div>
+        </section>
 
-        <div class="active" id="active">
-          <a href="#active" class="activity__title heading heading--tertiary">Task active <span
-              class="active__count">6</span></a>
-          <ul class="active__list">
-            <li class="active__task">Active task 1</li>
-            <li class="active__task">Active task 2</li>
-            <li class="active__task">Active task 3</li>
-            <li class="active__task">Active task 4</li>
-            <li class="active__task">Active task 5</li>
-            <li class="active__task">Active task 6</li>
-          </ul>
-        </div>
+        <section class="activity">
+          <div class="activity__tasks">
+            <div class="active" id="active">
+              <a href="#active" class="activity__title heading heading--tertiary">Task active <span
+                  class="active__count"></span></a>
+              <ul class="active__list">
+              </ul>
+            </div>
 
-        <div class="finished" id="finished">
-          <a href="#finished" class="activity__title heading heading--tertiary">Task finished <span
-              class="finished__count">3</span></a>
-          <ul class="finished__list">
-            <li class="finished__task">Finished task 1</li>
-            <li class="finished__task">Finished task 2</li>
-            <li class="finished__task">Finished task 3</li>
-          </ul>
-        </div>
+            <div class="finished" id="finished">
+              <a href="#finished" class="activity__title heading heading--tertiary">Task finished <span
+                  class="finished__count"></span></a>
+              <ul class="finished__list">
+              </ul>
+            </div>
+          </div>
+          <div class="progress">
+            <svg>
+              <circle cx="50%" cy="50%" r="50"></circle>
+              <circle class="progress__bar" cx="50%" cy="50%" r="50"></circle>
+            </svg>
+            <h2 class="heading heading--secondary progress__heading">
+              You have finished
+              <span class="progress__precentage-number"></span>
+            </h2>
+          </div>
+        </section>
       </div>
     </section>
   </main>
